@@ -1,0 +1,11 @@
+<!--  8 تم وضع السليكت ككومبونينت  مشترك لانها ربما ستلزم في مكان اخر  -->
+<!--في الفيو ولكن تم جلبه ووضعه هنا للتنظيم all-products.component الكود التالي كان في ال  -->
+<label for="categoires" class="my-1">{{title}} </label>
+    <select class="form-control" style="width: 19rem;" id="categoires"
+     (change)='detectChanges($event)'> <!-- السطر هذا تم كتابته لفلترة المنتجات على حسب التصنيف الذي تم اختياره في القائمة   -->
+      <option value="all" selected>All</option>
+      @for (item of data; track $index)
+       {
+          <option value="{{item}}">{{item}}</option>
+       }
+    </select>

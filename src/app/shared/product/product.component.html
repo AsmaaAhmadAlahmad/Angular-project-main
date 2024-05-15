@@ -1,0 +1,25 @@
+<!--8  في الفيو ولكن تم جلبه ووضعه هنا للتنظيم all-products.component الكود التالي كان في ال  -->
+<div class="card my text-center my-3">
+  <div class="card-header">
+    <div routerLink = "/details/{{data.id}}">
+      <img
+      class="card-img-top"
+      src="{{ data.image }}"
+      height="300px"
+      alt="{{ data.description }}"
+      />
+    </div>
+  </div>
+  <div class="card-body overflow-hidden" style="height: 100px">
+    <h5 class="card-title">{{ data.title }}</h5>
+    <p class="card-text" style="overflow-y: auto">{{ data.description }}</p>
+  </div>
+  <div class="card-footer text-muted d-flex justify-content-between">
+    <button class="btn btn-primary" *ngIf="!addButton" (click)="addButton=true">Add to cart</button>
+    <div class="d-flex w-50" *ngIf="addButton">
+      <input class="form-control" type="number" name="" id="" [(ngModel)] = "amount">
+      <button class="btn btn-danger" (click)="add(); addButton= false">Add</button>
+    </div>
+    <span class="rounded ml-auto p-2">{{ data.price }}$</span>
+  </div>
+</div>

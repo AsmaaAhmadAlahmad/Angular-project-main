@@ -1,0 +1,22 @@
+
+
+
+<div class="box">
+  <div class="row">
+    <div class="col-md-5 col-12">
+    <img src="{{data.image}}" alt="{{data.title}}">
+    </div>
+    <div class="col-md-7 col-12">
+      <div class="info">
+        <ul class="list-unstyled">
+          <li>Title: {{data.title}}</li>
+          <li>Price: {{data.price}}</li>
+          <li>Description: {{data.description}}</li>
+          <li>rating.rate: {{data.rating.rate}}</li>
+          <li>rating.count: {{data.rating.count}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <app-spinner *ngIf="loading"></app-spinner>
+</div>
